@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Figtree';
+}
+
+body {
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    min-height: inherit;
+    background-color: hsl(47, 88%, 63%);
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 475px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px black;
+    min-height: 60vh;
+    border-radius: 5%;
+    background-color: white;
+    padding: clamp(1rem, 10vw, 1.5rem);
+    gap: 1.3rem;
+}
+
+.card-img img {
+    display: block;
+    width: 100%;
+    border-radius: 5%;
+}
+
+.card-button {
+    max-width: 23%;
+}
+
+.card-button > button {
+    display: block;
+    min-width: 100%;
+    background-color: hsl(47, 88%, 63%);
+    border: transparent;
+    border-radius: 7%;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.card-author {
+    display: flex;
+    flex-direction: row;
+    gap: 2vmin;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-info > h1 {
+    font-size: clamp(1.25rem, 6vw, 1.8rem);
+    font-weight: 800;
+}
+
+.card-info > h1:hover {
+    cursor: pointer;
+    caret-color: black;
+    color: hsl(47, 88%, 63%);
+}
+
+.card-info > p {
+    color: hsl(0, 0%, 50%);
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: clamp(1rem, 1vw, 1.25rem);
+}
+
+.card-author {
+    flex: 0;
+}
+
+.card-author > img {
+    display: block;
+    max-width: 100%;
+    max-width: 32px;
+}
+
+.card-author > p {
+    align-self: center;
+    font-weight: bold;
+}
